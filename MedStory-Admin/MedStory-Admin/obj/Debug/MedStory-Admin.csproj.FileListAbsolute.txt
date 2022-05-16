@@ -1,0 +1,10 @@
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\Debug\MedStory-Admin.exe.config
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\Debug\MedStory-Admin.exe
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\Debug\MedStory-Admin.pdb
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory-Admin.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory_Admin.Form1.resources
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory_Admin.Properties.Resources.resources
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory-Admin.csproj.GenerateResource.cache
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory-Admin.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory-Admin.exe
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory-Admin.pdb
