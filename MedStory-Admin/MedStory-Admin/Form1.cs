@@ -12,10 +12,14 @@ namespace MedStory_Admin
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
-        }
+            activeMark.Height = ForumButton.Height;
+            activeMark.Top = ForumButton.Top;
+            forum_Database1.BringToFront();
+        } 
 
         private void windowSize(object sender, EventArgs e)
         {
@@ -37,10 +41,6 @@ namespace MedStory_Admin
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -73,6 +73,56 @@ namespace MedStory_Admin
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ForumButton_Click(object sender, EventArgs e)
+        {
+            activeMark.Height = ForumButton.Height;
+            activeMark.Top = ForumButton.Top;
+            forum_Database1.BringToFront();
+        }
+
+        private void PenggunaButton_Click(object sender, EventArgs e)
+        {
+            activeMark.Height = PenggunaButton.Height;
+            activeMark.Top = PenggunaButton.Top;
+            pengguna_Database1.BringToFront();
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            this.pengguna_Database1.displayUser();
+            this.forum_Database1.displayDiskusi();
         }
     }
 }
