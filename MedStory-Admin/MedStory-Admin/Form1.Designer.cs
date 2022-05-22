@@ -29,16 +29,17 @@ namespace MedStory_Admin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
+            this.NomorDaruratButton = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.activeMark = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.PenggunaButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.AsupanButton = new System.Windows.Forms.Button();
             this.ForumButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,8 +53,11 @@ namespace MedStory_Admin
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.asupan_Database1 = new MedStory_Admin.Asupan_Database();
             this.pengguna_Database1 = new MedStory_Admin.Pengguna_Database();
             this.forum_Database1 = new MedStory_Admin.Forum_Database();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,14 +66,14 @@ namespace MedStory_Admin
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel1.Controls.Add(this.button15);
+            this.panel1.Controls.Add(this.NomorDaruratButton);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.activeMark);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.PenggunaButton);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.AsupanButton);
             this.panel1.Controls.Add(this.ForumButton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -79,23 +83,24 @@ namespace MedStory_Admin
             this.panel1.Size = new System.Drawing.Size(319, 884);
             this.panel1.TabIndex = 0;
             // 
-            // button15
+            // NomorDaruratButton
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(16, 405);
-            this.button15.Margin = new System.Windows.Forms.Padding(4);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(304, 74);
-            this.button15.TabIndex = 7;
-            this.button15.Text = "   Nomor Darurat";
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button15.UseVisualStyleBackColor = false;
+            this.NomorDaruratButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.NomorDaruratButton.FlatAppearance.BorderSize = 0;
+            this.NomorDaruratButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NomorDaruratButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomorDaruratButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.NomorDaruratButton.Image = ((System.Drawing.Image)(resources.GetObject("NomorDaruratButton.Image")));
+            this.NomorDaruratButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NomorDaruratButton.Location = new System.Drawing.Point(16, 405);
+            this.NomorDaruratButton.Margin = new System.Windows.Forms.Padding(4);
+            this.NomorDaruratButton.Name = "NomorDaruratButton";
+            this.NomorDaruratButton.Size = new System.Drawing.Size(304, 74);
+            this.NomorDaruratButton.TabIndex = 7;
+            this.NomorDaruratButton.Text = "   Nomor Darurat";
+            this.NomorDaruratButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.NomorDaruratButton.UseVisualStyleBackColor = false;
+            this.NomorDaruratButton.Click += new System.EventHandler(this.NomorDaruratButton_Click);
             // 
             // button10
             // 
@@ -166,7 +171,6 @@ namespace MedStory_Admin
             this.button8.Text = "   RoboDoc";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // PenggunaButton
             // 
@@ -187,23 +191,24 @@ namespace MedStory_Admin
             this.PenggunaButton.UseVisualStyleBackColor = false;
             this.PenggunaButton.Click += new System.EventHandler(this.PenggunaButton_Click);
             // 
-            // button5
+            // AsupanButton
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(16, 263);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(304, 74);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "   Asupan";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.AsupanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.AsupanButton.FlatAppearance.BorderSize = 0;
+            this.AsupanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AsupanButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AsupanButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AsupanButton.Image = ((System.Drawing.Image)(resources.GetObject("AsupanButton.Image")));
+            this.AsupanButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AsupanButton.Location = new System.Drawing.Point(16, 263);
+            this.AsupanButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AsupanButton.Name = "AsupanButton";
+            this.AsupanButton.Size = new System.Drawing.Size(304, 74);
+            this.AsupanButton.TabIndex = 3;
+            this.AsupanButton.Text = "   Asupan";
+            this.AsupanButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AsupanButton.UseVisualStyleBackColor = false;
+            this.AsupanButton.Click += new System.EventHandler(this.AsupanButton_Click);
             // 
             // ForumButton
             // 
@@ -384,6 +389,18 @@ namespace MedStory_Admin
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // asupan_Database1
+            // 
+            this.asupan_Database1.Location = new System.Drawing.Point(325, 76);
+            this.asupan_Database1.Name = "asupan_Database1";
+            this.asupan_Database1.Size = new System.Drawing.Size(1225, 800);
+            this.asupan_Database1.TabIndex = 4;
+            // 
             // pengguna_Database1
             // 
             this.pengguna_Database1.Location = new System.Drawing.Point(325, 76);
@@ -398,11 +415,19 @@ namespace MedStory_Admin
             this.forum_Database1.Size = new System.Drawing.Size(1225, 801);
             this.forum_Database1.TabIndex = 2;
             // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.asupan_Database1);
             this.Controls.Add(this.pengguna_Database1);
             this.Controls.Add(this.forum_Database1);
             this.Controls.Add(this.panel2);
@@ -437,7 +462,7 @@ namespace MedStory_Admin
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button ForumButton;
         private System.Windows.Forms.Button PenggunaButton;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button AsupanButton;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel activeMark;
         private System.Windows.Forms.Button button9;
@@ -448,9 +473,12 @@ namespace MedStory_Admin
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button NomorDaruratButton;
         private Forum_Database forum_Database1;
         private Pengguna_Database pengguna_Database1;
+        private Asupan_Database asupan_Database1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }
 

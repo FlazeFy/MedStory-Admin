@@ -42,11 +42,6 @@ namespace MedStory_Admin
         }
 
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void moveWindow(object sender, MouseEventArgs e)
         {
 
@@ -123,6 +118,21 @@ namespace MedStory_Admin
         {
             this.pengguna_Database1.displayUser();
             this.forum_Database1.displayDiskusi();
+            this.forum_Database1.displayDiskusiTerbalas();
+            this.asupan_Database1.displayAsupan();
+        }
+
+        private void AsupanButton_Click(object sender, EventArgs e)
+        {
+            activeMark.Height = AsupanButton.Height;
+            activeMark.Top = AsupanButton.Top;
+            asupan_Database1.BringToFront();
+        }
+
+        private void NomorDaruratButton_Click(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }

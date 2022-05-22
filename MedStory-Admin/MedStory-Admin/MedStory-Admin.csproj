@@ -90,6 +90,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asupan_Database.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asupan_Database.Designer.cs">
+      <DependentUpon>Asupan_Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control.cs" />
     <Compile Include="DBMedStory.cs" />
     <Compile Include="Form1.cs">
@@ -112,6 +118,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Asupan_Database.resx">
+      <DependentUpon>Asupan_Database.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

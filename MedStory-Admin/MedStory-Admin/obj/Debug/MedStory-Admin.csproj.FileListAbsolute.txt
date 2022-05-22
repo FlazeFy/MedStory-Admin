@@ -33,3 +33,4 @@ C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\Debug\System.Runtim
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory-Admin.csproj.CopyComplete
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory_Admin.Forum_Database.resources
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory_Admin.Pengguna_Database.resources
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\Debug\MedStory_Admin.Asupan_Database.resources

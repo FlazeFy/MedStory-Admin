@@ -31,5 +31,21 @@ namespace MedStory_Admin
         {
             DBMedStory.ReadUser("SELECT * FROM pengguna WHERE namaPengguna LIKE '%" + searchBox1.Text + "%' OR namaLengkap LIKE '%" + searchBox1.Text + "%'", dataGridView1);
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox3.Text == "Pria")
+            {
+                DBMedStory.ReadUser("SELECT * FROM pengguna WHERE jKelamin = 'Pria'", dataGridView1);
+            }
+                else if (comboBox3.Text == "Wanita")
+            {
+                DBMedStory.ReadUser("SELECT * FROM pengguna WHERE jKelamin = 'Wanita'", dataGridView1);
+            }
+                else if (comboBox3.Text == "Semua")
+            {
+                DBMedStory.ReadUser("SELECT * FROM pengguna", dataGridView1);
+            }
+        }
     }
 }
