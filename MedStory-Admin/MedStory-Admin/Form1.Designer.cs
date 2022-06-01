@@ -58,6 +58,8 @@ namespace MedStory_Admin
             this.pengguna_Database1 = new MedStory_Admin.Pengguna_Database();
             this.forum_Database1 = new MedStory_Admin.Forum_Database();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
+            this.darurat_Database1 = new MedStory_Admin.Darurat_Database();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -422,11 +424,26 @@ namespace MedStory_Admin
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
+            // mySqlDataAdapter1
+            // 
+            this.mySqlDataAdapter1.DeleteCommand = null;
+            this.mySqlDataAdapter1.InsertCommand = null;
+            this.mySqlDataAdapter1.SelectCommand = null;
+            this.mySqlDataAdapter1.UpdateCommand = null;
+            // 
+            // darurat_Database1
+            // 
+            this.darurat_Database1.Location = new System.Drawing.Point(319, 70);
+            this.darurat_Database1.Name = "darurat_Database1";
+            this.darurat_Database1.Size = new System.Drawing.Size(1225, 800);
+            this.darurat_Database1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.darurat_Database1);
             this.Controls.Add(this.asupan_Database1);
             this.Controls.Add(this.pengguna_Database1);
             this.Controls.Add(this.forum_Database1);
@@ -479,6 +496,8 @@ namespace MedStory_Admin
         private Asupan_Database asupan_Database1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
+        private Darurat_Database darurat_Database1;
     }
 }
 

@@ -29,6 +29,10 @@ namespace MedStory_Admin
         {
             DBMedStory.ReadUser("SELECT * FROM balasan", dataGridView3);
         }
+        public void displayNewsFeed()
+        {
+            DBMedStory.ReadUser("SELECT * FROM newsfeed", dataGridView1);
+        }
 
         private void searchBox2_TextChanged(object sender, EventArgs e)
         {
@@ -44,7 +48,7 @@ namespace MedStory_Admin
         {
             if (comboBox2.Text == "Semua kategori")
             {
-                DBMedStory.ReadUser("SELECT * FROM diskusi", dataGridView2);
+                displayDiskusi();
             } 
                 else
             {
@@ -76,7 +80,7 @@ namespace MedStory_Admin
             } 
                 else if (comboBox3.Text == "Semua")
             {
-                DBMedStory.ReadUser("SELECT * FROM balasan", dataGridView3);
+                displayDiskusiTerbalas();
             }
         }
 
@@ -95,6 +99,11 @@ namespace MedStory_Admin
         private void Forum_Database_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DBMedStory.ReadUser("SELECT * FROM newsfeed WHERE title LIKE '%" + textBox1.Text + "%' OR isi LIKE '%" + textBox1.Text + "%'", dataGridView1);
         }
     }
 }

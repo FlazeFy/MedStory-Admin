@@ -44,7 +44,7 @@ namespace MedStory_Admin
             }
                 else if (comboBox3.Text == "Semua")
             {
-                DBMedStory.ReadUser("SELECT * FROM pengguna", dataGridView1);
+                displayUser();
             }
         }
     }

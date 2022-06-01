@@ -119,7 +119,12 @@ namespace MedStory_Admin
             this.pengguna_Database1.displayUser();
             this.forum_Database1.displayDiskusi();
             this.forum_Database1.displayDiskusiTerbalas();
+            this.forum_Database1.displayNewsFeed();
             this.asupan_Database1.displayAsupan();
+            this.asupan_Database1.displayJadwal();
+            this.asupan_Database1.displayKebutuhan();
+            this.darurat_Database1.displayDokterPraktik();
+            this.darurat_Database1.displayFaskes();
         }
 
         private void AsupanButton_Click(object sender, EventArgs e)
@@ -131,8 +136,9 @@ namespace MedStory_Admin
 
         private void NomorDaruratButton_Click(object sender, EventArgs e)
         {
-            
-            
+            activeMark.Height = NomorDaruratButton.Height;
+            activeMark.Top = NomorDaruratButton.Top;
+            darurat_Database1.BringToFront();
         }
     }
 }
