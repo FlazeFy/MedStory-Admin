@@ -23,7 +23,6 @@ C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\x86\Debug\System.Bu
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\x86\Debug\System.Memory.xml
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\x86\Debug\System.Numerics.Vectors.xml
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory-Admin.csproj.AssemblyReference.cache
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Asupan_Database.resources
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Darurat_Database.resources
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Form1.resources
@@ -36,3 +35,5 @@ C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory-
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory-Admin.exe
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory-Admin.pdb
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Robodoc_Database.resources
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Robodoc_Manajemen.resources
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory-Admin.csproj.AssemblyReference.cache

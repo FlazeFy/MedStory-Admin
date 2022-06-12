@@ -162,6 +162,7 @@
     <Compile Include="Pengguna_Database.Designer.cs">
       <DependentUpon>Pengguna_Database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Penyakit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Robodoc_Database.cs">
@@ -169,6 +170,12 @@
     </Compile>
     <Compile Include="Robodoc_Database.Designer.cs">
       <DependentUpon>Robodoc_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Robodoc_Manajemen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Robodoc_Manajemen.Designer.cs">
+      <DependentUpon>Robodoc_Manajemen.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Asupan_Database.resx">
       <DependentUpon>Asupan_Database.cs</DependentUpon>
@@ -196,6 +203,9 @@
     </Compile>
     <EmbeddedResource Include="Robodoc_Database.resx">
       <DependentUpon>Robodoc_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Robodoc_Manajemen.resx">
+      <DependentUpon>Robodoc_Manajemen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

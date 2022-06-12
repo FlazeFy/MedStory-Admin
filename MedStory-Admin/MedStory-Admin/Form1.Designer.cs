@@ -43,24 +43,25 @@ namespace MedStory_Admin
             this.ForumButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.activeNav = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.RoboDocManButton = new System.Windows.Forms.Button();
+            this.databaseButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
+            this.robodoc_Database1 = new MedStory_Admin.Robodoc_Database();
+            this.darurat_Database1 = new MedStory_Admin.Darurat_Database();
             this.asupan_Database1 = new MedStory_Admin.Asupan_Database();
             this.pengguna_Database1 = new MedStory_Admin.Pengguna_Database();
             this.forum_Database1 = new MedStory_Admin.Forum_Database();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
-            this.darurat_Database1 = new MedStory_Admin.Darurat_Database();
-            this.robodoc_Database1 = new MedStory_Admin.Robodoc_Database();
+            this.robodoc_Manajemen1 = new MedStory_Admin.Robodoc_Manajemen();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -248,11 +249,11 @@ namespace MedStory_Admin
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
-            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.activeNav);
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button11);
+            this.panel2.Controls.Add(this.RoboDocManButton);
+            this.panel2.Controls.Add(this.databaseButton);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -268,13 +269,13 @@ namespace MedStory_Admin
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             // 
-            // panel4
+            // activeNav
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(186)))), ((int)(((byte)(36)))));
-            this.panel4.Location = new System.Drawing.Point(278, 58);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(110, 6);
-            this.panel4.TabIndex = 2;
+            this.activeNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(186)))), ((int)(((byte)(36)))));
+            this.activeNav.Location = new System.Drawing.Point(261, 58);
+            this.activeNav.Name = "activeNav";
+            this.activeNav.Size = new System.Drawing.Size(150, 6);
+            this.activeNav.TabIndex = 2;
             // 
             // button13
             // 
@@ -302,32 +303,33 @@ namespace MedStory_Admin
             this.button14.Text = "Statistik";
             this.button14.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // RoboDocManButton
             // 
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.button12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button12.Location = new System.Drawing.Point(414, 7);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(150, 45);
-            this.button12.TabIndex = 7;
-            this.button12.Text = "Manajemen";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.RoboDocManButton.FlatAppearance.BorderSize = 0;
+            this.RoboDocManButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RoboDocManButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.RoboDocManButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.RoboDocManButton.Location = new System.Drawing.Point(414, 7);
+            this.RoboDocManButton.Name = "RoboDocManButton";
+            this.RoboDocManButton.Size = new System.Drawing.Size(150, 45);
+            this.RoboDocManButton.TabIndex = 7;
+            this.RoboDocManButton.Text = "Manajemen";
+            this.RoboDocManButton.UseVisualStyleBackColor = true;
+            this.RoboDocManButton.Click += new System.EventHandler(this.RoboDocManButton_Click);
             // 
-            // button11
+            // databaseButton
             // 
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.button11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button11.Location = new System.Drawing.Point(259, 7);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(150, 45);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Database";
-            this.button11.UseVisualStyleBackColor = true;
+            this.databaseButton.FlatAppearance.BorderSize = 0;
+            this.databaseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.databaseButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.databaseButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.databaseButton.Location = new System.Drawing.Point(259, 7);
+            this.databaseButton.Name = "databaseButton";
+            this.databaseButton.Size = new System.Drawing.Size(150, 45);
+            this.databaseButton.TabIndex = 6;
+            this.databaseButton.Text = "Database";
+            this.databaseButton.UseVisualStyleBackColor = true;
+            this.databaseButton.Click += new System.EventHandler(this.databaseButton_Click);
             // 
             // button4
             // 
@@ -398,6 +400,34 @@ namespace MedStory_Admin
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
+            // mySqlDataAdapter1
+            // 
+            this.mySqlDataAdapter1.DeleteCommand = null;
+            this.mySqlDataAdapter1.InsertCommand = null;
+            this.mySqlDataAdapter1.SelectCommand = null;
+            this.mySqlDataAdapter1.UpdateCommand = null;
+            // 
+            // robodoc_Database1
+            // 
+            this.robodoc_Database1.Location = new System.Drawing.Point(319, 67);
+            this.robodoc_Database1.Name = "robodoc_Database1";
+            this.robodoc_Database1.Size = new System.Drawing.Size(1225, 800);
+            this.robodoc_Database1.TabIndex = 6;
+            // 
+            // darurat_Database1
+            // 
+            this.darurat_Database1.Location = new System.Drawing.Point(319, 70);
+            this.darurat_Database1.Name = "darurat_Database1";
+            this.darurat_Database1.Size = new System.Drawing.Size(1225, 800);
+            this.darurat_Database1.TabIndex = 5;
+            // 
             // asupan_Database1
             // 
             this.asupan_Database1.Location = new System.Drawing.Point(325, 76);
@@ -419,39 +449,19 @@ namespace MedStory_Admin
             this.forum_Database1.Size = new System.Drawing.Size(1225, 801);
             this.forum_Database1.TabIndex = 2;
             // 
-            // mySqlCommand1
+            // robodoc_Manajemen1
             // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
-            // 
-            // mySqlDataAdapter1
-            // 
-            this.mySqlDataAdapter1.DeleteCommand = null;
-            this.mySqlDataAdapter1.InsertCommand = null;
-            this.mySqlDataAdapter1.SelectCommand = null;
-            this.mySqlDataAdapter1.UpdateCommand = null;
-            // 
-            // darurat_Database1
-            // 
-            this.darurat_Database1.Location = new System.Drawing.Point(319, 70);
-            this.darurat_Database1.Name = "darurat_Database1";
-            this.darurat_Database1.Size = new System.Drawing.Size(1225, 800);
-            this.darurat_Database1.TabIndex = 5;
-            // 
-            // robodoc_Database1
-            // 
-            this.robodoc_Database1.Location = new System.Drawing.Point(319, 67);
-            this.robodoc_Database1.Name = "robodoc_Database1";
-            this.robodoc_Database1.Size = new System.Drawing.Size(1225, 800);
-            this.robodoc_Database1.TabIndex = 6;
+            this.robodoc_Manajemen1.Location = new System.Drawing.Point(319, 67);
+            this.robodoc_Manajemen1.Name = "robodoc_Manajemen1";
+            this.robodoc_Manajemen1.Size = new System.Drawing.Size(1225, 800);
+            this.robodoc_Manajemen1.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.robodoc_Manajemen1);
             this.Controls.Add(this.robodoc_Database1);
             this.Controls.Add(this.darurat_Database1);
             this.Controls.Add(this.asupan_Database1);
@@ -495,11 +505,11 @@ namespace MedStory_Admin
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button databaseButton;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button RoboDocManButton;
+        private System.Windows.Forms.Panel activeNav;
         private System.Windows.Forms.Button NomorDaruratButton;
         private Forum_Database forum_Database1;
         private Pengguna_Database pengguna_Database1;
@@ -509,6 +519,7 @@ namespace MedStory_Admin
         private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
         private Darurat_Database darurat_Database1;
         private Robodoc_Database robodoc_Database1;
+        private Robodoc_Manajemen robodoc_Manajemen1;
     }
 }
 

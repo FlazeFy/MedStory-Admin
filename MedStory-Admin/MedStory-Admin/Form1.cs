@@ -12,12 +12,14 @@ namespace MedStory_Admin
 {
     public partial class Form1 : Form
     {
+        string tab = "";
 
         public Form1()
         {
             InitializeComponent();
             activeMark.Height = ForumButton.Height;
             activeMark.Top = ForumButton.Top;
+            activeNav.Top = databaseButton.Top;
             forum_Database1.BringToFront();
         } 
 
@@ -70,9 +72,14 @@ namespace MedStory_Admin
             mouseDown = false;
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void RoboDocManButton_Click(object sender, EventArgs e)
         {
-
+            if(tab == "RoboDoc")
+            {
+                activeNav.Top = RoboDocManButton.Top;
+                activeNav.Location = RoboDocManButton.Location;
+                robodoc_Manajemen1.BringToFront();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -148,7 +155,18 @@ namespace MedStory_Admin
         {
             activeMark.Height = RoboDocButton.Height;
             activeMark.Top = RoboDocButton.Top;
+            tab = "RoboDoc";
             robodoc_Database1.BringToFront();
+        }
+
+        private void databaseButton_Click(object sender, EventArgs e)
+        {
+            if (tab == "RoboDoc")
+            {
+                activeNav.Top = databaseButton.Top;
+                activeNav.Location = databaseButton.Location;
+                robodoc_Database1.BringToFront();
+            }
         }
     }
 }
