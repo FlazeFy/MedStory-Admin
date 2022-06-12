@@ -37,7 +37,7 @@ namespace MedStory_Admin
             this.label2 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.activeMark = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.RoboDocButton = new System.Windows.Forms.Button();
             this.PenggunaButton = new System.Windows.Forms.Button();
             this.AsupanButton = new System.Windows.Forms.Button();
             this.ForumButton = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@ namespace MedStory_Admin
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.darurat_Database1 = new MedStory_Admin.Darurat_Database();
+            this.robodoc_Database1 = new MedStory_Admin.Robodoc_Database();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,7 +74,7 @@ namespace MedStory_Admin
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.activeMark);
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.RoboDocButton);
             this.panel1.Controls.Add(this.PenggunaButton);
             this.panel1.Controls.Add(this.AsupanButton);
             this.panel1.Controls.Add(this.ForumButton);
@@ -156,23 +157,24 @@ namespace MedStory_Admin
             this.activeMark.Size = new System.Drawing.Size(15, 74);
             this.activeMark.TabIndex = 2;
             // 
-            // button8
+            // RoboDocButton
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(16, 337);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(304, 74);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "   RoboDoc";
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = false;
+            this.RoboDocButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.RoboDocButton.FlatAppearance.BorderSize = 0;
+            this.RoboDocButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RoboDocButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoboDocButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.RoboDocButton.Image = ((System.Drawing.Image)(resources.GetObject("RoboDocButton.Image")));
+            this.RoboDocButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RoboDocButton.Location = new System.Drawing.Point(16, 337);
+            this.RoboDocButton.Margin = new System.Windows.Forms.Padding(4);
+            this.RoboDocButton.Name = "RoboDocButton";
+            this.RoboDocButton.Size = new System.Drawing.Size(304, 74);
+            this.RoboDocButton.TabIndex = 5;
+            this.RoboDocButton.Text = "   RoboDoc";
+            this.RoboDocButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RoboDocButton.UseVisualStyleBackColor = false;
+            this.RoboDocButton.Click += new System.EventHandler(this.RoboDocButton_Click);
             // 
             // PenggunaButton
             // 
@@ -438,11 +440,19 @@ namespace MedStory_Admin
             this.darurat_Database1.Size = new System.Drawing.Size(1225, 800);
             this.darurat_Database1.TabIndex = 5;
             // 
+            // robodoc_Database1
+            // 
+            this.robodoc_Database1.Location = new System.Drawing.Point(319, 67);
+            this.robodoc_Database1.Name = "robodoc_Database1";
+            this.robodoc_Database1.Size = new System.Drawing.Size(1225, 800);
+            this.robodoc_Database1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.robodoc_Database1);
             this.Controls.Add(this.darurat_Database1);
             this.Controls.Add(this.asupan_Database1);
             this.Controls.Add(this.pengguna_Database1);
@@ -480,7 +490,7 @@ namespace MedStory_Admin
         private System.Windows.Forms.Button ForumButton;
         private System.Windows.Forms.Button PenggunaButton;
         private System.Windows.Forms.Button AsupanButton;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button RoboDocButton;
         private System.Windows.Forms.Panel activeMark;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label2;
@@ -498,6 +508,7 @@ namespace MedStory_Admin
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
         private Darurat_Database darurat_Database1;
+        private Robodoc_Database robodoc_Database1;
     }
 }
 

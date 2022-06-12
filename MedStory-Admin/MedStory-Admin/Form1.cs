@@ -125,6 +125,9 @@ namespace MedStory_Admin
             this.asupan_Database1.displayKebutuhan();
             this.darurat_Database1.displayDokterPraktik();
             this.darurat_Database1.displayFaskes();
+            this.robodoc_Database1.displayGejala();
+            this.robodoc_Database1.displayPenyakit();
+            this.robodoc_Database1.displayRelasi();
         }
 
         private void AsupanButton_Click(object sender, EventArgs e)
@@ -139,6 +142,13 @@ namespace MedStory_Admin
             activeMark.Height = NomorDaruratButton.Height;
             activeMark.Top = NomorDaruratButton.Top;
             darurat_Database1.BringToFront();
+        }
+
+        private void RoboDocButton_Click(object sender, EventArgs e)
+        {
+            activeMark.Height = RoboDocButton.Height;
+            activeMark.Top = RoboDocButton.Top;
+            robodoc_Database1.BringToFront();
         }
     }
 }
