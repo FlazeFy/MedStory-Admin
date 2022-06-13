@@ -119,6 +119,8 @@ namespace MedStory_Admin
         {
             activeMark.Height = ForumButton.Height;
             activeMark.Top = ForumButton.Top;
+            activeNav.Top = databaseButton.Top;
+            activeNav.Location = databaseButton.Location;
             tab = "Forum";
             forum_Database1.BringToFront();
         }
@@ -165,6 +167,8 @@ namespace MedStory_Admin
         {
             activeMark.Height = RoboDocButton.Height;
             activeMark.Top = RoboDocButton.Top;
+            activeNav.Top = databaseButton.Top;
+            activeNav.Location = databaseButton.Location;
             tab = "RoboDoc";
             robodoc_Database1.BringToFront();
         }

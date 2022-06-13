@@ -19,4 +19,18 @@ namespace MedStory_Admin
             //ImageURL = imageurl;
         }
     }
+    class Balasan
+    {
+        public string Isi { get; set; }
+        public int Id_Diskusi { get; set; }
+
+        //public string ImageURL { get; set; }
+
+        public Balasan(string isi, int id_diskusi /*, string imageurl*/)
+        {
+            Isi = isi;
+            Id_Diskusi = id_diskusi;
+            //ImageURL = imageurl;
+        }
+    }
 }

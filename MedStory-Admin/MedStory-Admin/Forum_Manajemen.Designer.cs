@@ -39,20 +39,22 @@ namespace MedStory_Admin
             this.button16 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.kategoriCtrl = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.isiBalasanCtrl = new System.Windows.Forms.RichTextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.kategoriCtrl = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,9 +63,9 @@ namespace MedStory_Admin
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -159,7 +161,7 @@ namespace MedStory_Admin
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.isiBalasanCtrl);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.dataGridView2);
@@ -171,137 +173,6 @@ namespace MedStory_Admin
             this.groupBox2.TabIndex = 62;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Balasan";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.pertanyaanCtrl);
-            this.groupBox1.Controls.Add(this.kategoriCtrl);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button18);
-            this.groupBox1.Controls.Add(this.button16);
-            this.groupBox1.Location = new System.Drawing.Point(12, 79);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 132);
-            this.groupBox1.TabIndex = 61;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Diskusi";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label7.Location = new System.Drawing.Point(6, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(186, 28);
-            this.label7.TabIndex = 60;
-            this.label7.Text = "Forum | Manajemen";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Kategori";
-            // 
-            // kategoriCtrl
-            // 
-            this.kategoriCtrl.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.kategoriCtrl.FormattingEnabled = true;
-            this.kategoriCtrl.Items.AddRange(new object[] {
-            "Penyakit dalam",
-            "Penyakit menular",
-            "Vaksin & Imunisasi",
-            "Kulit & Kelamin",
-            "Otot & Saraf",
-            "THT & Mata",
-            "Penyakit Lansia",
-            "Obat-obatan",
-            "Gaya hidup sehat",
-            "Kandungan & Bedah",
-            "Gigi",
-            "Anak"});
-            this.kategoriCtrl.Location = new System.Drawing.Point(122, 85);
-            this.kategoriCtrl.Name = "kategoriCtrl";
-            this.kategoriCtrl.Size = new System.Drawing.Size(136, 24);
-            this.kategoriCtrl.TabIndex = 51;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(274, 88);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(100, 21);
-            this.checkBox1.TabIndex = 66;
-            this.checkBox1.Text = "With Image";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(367, 292);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(100, 21);
-            this.checkBox2.TabIndex = 67;
-            this.checkBox2.Text = "With Image";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(533, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 40);
-            this.button3.TabIndex = 68;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(367, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
-            this.textBox1.TabIndex = 67;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Column1,
-            this.dataGridViewTextBoxColumn3,
-            this.Column5,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 19);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(351, 245);
-            this.dataGridView2.TabIndex = 66;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(7, 294);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(349, 61);
-            this.richTextBox1.TabIndex = 67;
-            this.richTextBox1.Text = "";
             // 
             // pictureBox1
             // 
@@ -329,6 +200,146 @@ namespace MedStory_Admin
             this.label5.TabIndex = 70;
             this.label5.Text = "Balas";
             // 
+            // isiBalasanCtrl
+            // 
+            this.isiBalasanCtrl.Location = new System.Drawing.Point(7, 294);
+            this.isiBalasanCtrl.Name = "isiBalasanCtrl";
+            this.isiBalasanCtrl.Size = new System.Drawing.Size(349, 61);
+            this.isiBalasanCtrl.TabIndex = 67;
+            this.isiBalasanCtrl.Text = "";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(533, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(40, 40);
+            this.button3.TabIndex = 68;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(367, 292);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(100, 21);
+            this.checkBox2.TabIndex = 67;
+            this.checkBox2.Text = "With Image";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Column6,
+            this.dataGridViewTextBoxColumn2,
+            this.Column1,
+            this.dataGridViewTextBoxColumn3,
+            this.Column5,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView2.Location = new System.Drawing.Point(7, 19);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(351, 245);
+            this.dataGridView2.TabIndex = 66;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(367, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 22);
+            this.textBox1.TabIndex = 67;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.pertanyaanCtrl);
+            this.groupBox1.Controls.Add(this.kategoriCtrl);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button18);
+            this.groupBox1.Controls.Add(this.button16);
+            this.groupBox1.Location = new System.Drawing.Point(12, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(586, 132);
+            this.groupBox1.TabIndex = 61;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Diskusi";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(274, 88);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(100, 21);
+            this.checkBox1.TabIndex = 66;
+            this.checkBox1.Text = "With Image";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // kategoriCtrl
+            // 
+            this.kategoriCtrl.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.kategoriCtrl.FormattingEnabled = true;
+            this.kategoriCtrl.Items.AddRange(new object[] {
+            "Penyakit dalam",
+            "Penyakit menular",
+            "Vaksin & Imunisasi",
+            "Kulit & Kelamin",
+            "Otot & Saraf",
+            "THT & Mata",
+            "Penyakit Lansia",
+            "Obat-obatan",
+            "Gaya hidup sehat",
+            "Kandungan & Bedah",
+            "Gigi",
+            "Anak"});
+            this.kategoriCtrl.Location = new System.Drawing.Point(122, 85);
+            this.kategoriCtrl.Name = "kategoriCtrl";
+            this.kategoriCtrl.Size = new System.Drawing.Size(136, 24);
+            this.kategoriCtrl.TabIndex = 51;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Kategori";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label7.Location = new System.Drawing.Point(6, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(186, 28);
+            this.label7.TabIndex = 60;
+            this.label7.Text = "Forum | Manajemen";
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "#";
@@ -337,6 +348,15 @@ namespace MedStory_Admin
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 40;
             // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "id_diskusi";
+            this.Column6.HeaderText = "ID Diskusi";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 50;
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "namaPengguna";
@@ -344,7 +364,7 @@ namespace MedStory_Admin
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 30;
+            this.dataGridViewTextBoxColumn2.Width = 75;
             // 
             // Column1
             // 
@@ -398,6 +418,7 @@ namespace MedStory_Admin
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
             // 
             // Forum_Manajemen
             // 
@@ -414,10 +435,10 @@ namespace MedStory_Admin
             this.Load += new System.EventHandler(this.Forum_Manajemen_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,12 +463,14 @@ namespace MedStory_Admin
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox isiBalasanCtrl;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

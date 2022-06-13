@@ -52,7 +52,7 @@ namespace MedStory_Admin
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (MySqlException ex)
             {
@@ -71,7 +71,7 @@ namespace MedStory_Admin
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (MySqlException ex)
             {
@@ -96,7 +96,32 @@ namespace MedStory_Admin
             try
             {
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Input gagal ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            con.Close();
+        }
+
+        public static void AddBalasan(Balasan bls)
+        {
+            string sql = "INSERT INTO balasan VALUES (NULL, @Pengirim, @Isi, @Id_Diskusi, @Datetime, @ImageURL, @Status)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Pengirim", MySqlDbType.VarChar).Value = "Admin";
+            cmd.Parameters.Add("@Isi", MySqlDbType.VarChar).Value = bls.Isi;
+            cmd.Parameters.Add("@Id_Diskusi", MySqlDbType.VarChar).Value = bls.Id_Diskusi;
+            cmd.Parameters.Add("@Datetime", MySqlDbType.VarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            cmd.Parameters.Add("@ImageURL", MySqlDbType.VarChar).Value = "null"; //For now until upload file feature has been created
+            cmd.Parameters.Add("@Status", MySqlDbType.VarChar).Value = "verified";
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (MySqlException ex)
             {
