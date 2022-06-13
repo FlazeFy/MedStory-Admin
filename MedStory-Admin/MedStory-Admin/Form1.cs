@@ -12,7 +12,7 @@ namespace MedStory_Admin
 {
     public partial class Form1 : Form
     {
-        string tab = "";
+        string tab = "Forum";
 
         public Form1()
         {
@@ -79,6 +79,14 @@ namespace MedStory_Admin
                 activeNav.Top = RoboDocManButton.Top;
                 activeNav.Location = RoboDocManButton.Location;
                 robodoc_Manajemen1.BringToFront();
+                Form1_Shown(sender, e);
+            } 
+            else if (tab == "Forum")
+            {
+                activeNav.Top = RoboDocManButton.Top;
+                activeNav.Location = RoboDocManButton.Location;
+                forum_Manajemen1.BringToFront();
+                Form1_Shown(sender, e);
             }
         }
 
@@ -111,6 +119,7 @@ namespace MedStory_Admin
         {
             activeMark.Height = ForumButton.Height;
             activeMark.Top = ForumButton.Top;
+            tab = "Forum";
             forum_Database1.BringToFront();
         }
 
@@ -135,6 +144,7 @@ namespace MedStory_Admin
             this.robodoc_Database1.displayGejala();
             this.robodoc_Database1.displayPenyakit();
             this.robodoc_Database1.displayRelasi();
+            this.forum_Manajemen1.displayDiskusi();
         }
 
         private void AsupanButton_Click(object sender, EventArgs e)
@@ -166,6 +176,14 @@ namespace MedStory_Admin
                 activeNav.Top = databaseButton.Top;
                 activeNav.Location = databaseButton.Location;
                 robodoc_Database1.BringToFront();
+                Form1_Shown(sender, e);
+            }
+            else if (tab == "Forum")
+            {
+                activeNav.Top = databaseButton.Top;
+                activeNav.Location = databaseButton.Location;
+                forum_Database1.BringToFront();
+                Form1_Shown(sender, e);
             }
         }
     }

@@ -60,7 +60,6 @@ namespace MedStory_Admin
                 throw;
             }
             con.Close();
-
         }
         public static void AddGejala(Gejala gjl)
         {
@@ -80,7 +79,31 @@ namespace MedStory_Admin
                 throw;
             }
             con.Close();
-
+        }
+        public static void AddDiskusi(Diskusi dis)
+        {
+            string sql = "INSERT INTO diskusi VALUES (NULL, @Nama_Pengguna, @Pertanyaan, @Kategori, @View, @Up, @ImageURL, @Datetime)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Nama_Pengguna", MySqlDbType.VarChar).Value = "Admin";
+            cmd.Parameters.Add("@Pertanyaan", MySqlDbType.VarChar).Value = dis.Pertanyaan;
+            cmd.Parameters.Add("@Kategori", MySqlDbType.VarChar).Value = dis.Kategori;
+            cmd.Parameters.Add("@View", MySqlDbType.VarChar).Value = 0;
+            cmd.Parameters.Add("@Up", MySqlDbType.VarChar).Value = 0;
+            cmd.Parameters.Add("@ImageURL", MySqlDbType.VarChar).Value = "null"; //For now until upload file feature has been created
+            cmd.Parameters.Add("@Datetime", MySqlDbType.VarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Input gagal ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            con.Close();
         }
     }
 }

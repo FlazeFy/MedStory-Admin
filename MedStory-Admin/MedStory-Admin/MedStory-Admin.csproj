@@ -150,11 +150,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forum.cs" />
     <Compile Include="Forum_Database.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forum_Database.Designer.cs">
       <DependentUpon>Forum_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forum_Manajemen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forum_Manajemen.Designer.cs">
+      <DependentUpon>Forum_Manajemen.cs</DependentUpon>
     </Compile>
     <Compile Include="Pengguna_Database.cs">
       <SubType>UserControl</SubType>
@@ -188,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forum_Database.resx">
       <DependentUpon>Forum_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forum_Manajemen.resx">
+      <DependentUpon>Forum_Manajemen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pengguna_Database.resx">
       <DependentUpon>Pengguna_Database.cs</DependentUpon>

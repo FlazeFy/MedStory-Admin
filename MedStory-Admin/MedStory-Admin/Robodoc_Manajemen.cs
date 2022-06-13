@@ -33,5 +33,10 @@ namespace MedStory_Admin
             Gejala gjl = new Gejala(namaGejalaCtrl.Text.Trim());
             DBMedStory.AddGejala(gjl);
         }
+
+        private void Robodoc_Manajemen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

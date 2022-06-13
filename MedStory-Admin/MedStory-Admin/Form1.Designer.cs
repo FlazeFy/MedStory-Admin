@@ -44,7 +44,6 @@ namespace MedStory_Admin
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.activeNav = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.RoboDocManButton = new System.Windows.Forms.Button();
             this.databaseButton = new System.Windows.Forms.Button();
@@ -62,6 +61,7 @@ namespace MedStory_Admin
             this.pengguna_Database1 = new MedStory_Admin.Pengguna_Database();
             this.forum_Database1 = new MedStory_Admin.Forum_Database();
             this.robodoc_Manajemen1 = new MedStory_Admin.Robodoc_Manajemen();
+            this.forum_Manajemen1 = new MedStory_Admin.Forum_Manajemen();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -250,7 +250,6 @@ namespace MedStory_Admin
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
             this.panel2.Controls.Add(this.activeNav);
-            this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
             this.panel2.Controls.Add(this.RoboDocManButton);
             this.panel2.Controls.Add(this.databaseButton);
@@ -276,19 +275,6 @@ namespace MedStory_Admin
             this.activeNav.Name = "activeNav";
             this.activeNav.Size = new System.Drawing.Size(150, 6);
             this.activeNav.TabIndex = 2;
-            // 
-            // button13
-            // 
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.button13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button13.Location = new System.Drawing.Point(725, 7);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(150, 45);
-            this.button13.TabIndex = 9;
-            this.button13.Text = "Riwayat";
-            this.button13.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -456,11 +442,19 @@ namespace MedStory_Admin
             this.robodoc_Manajemen1.Size = new System.Drawing.Size(1225, 800);
             this.robodoc_Manajemen1.TabIndex = 7;
             // 
+            // forum_Manajemen1
+            // 
+            this.forum_Manajemen1.Location = new System.Drawing.Point(319, 67);
+            this.forum_Manajemen1.Name = "forum_Manajemen1";
+            this.forum_Manajemen1.Size = new System.Drawing.Size(1225, 800);
+            this.forum_Manajemen1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.forum_Manajemen1);
             this.Controls.Add(this.robodoc_Manajemen1);
             this.Controls.Add(this.robodoc_Database1);
             this.Controls.Add(this.darurat_Database1);
@@ -506,7 +500,6 @@ namespace MedStory_Admin
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button databaseButton;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button RoboDocManButton;
         private System.Windows.Forms.Panel activeNav;
@@ -520,6 +513,7 @@ namespace MedStory_Admin
         private Darurat_Database darurat_Database1;
         private Robodoc_Database robodoc_Database1;
         private Robodoc_Manajemen robodoc_Manajemen1;
+        private Forum_Manajemen forum_Manajemen1;
     }
 }
 
