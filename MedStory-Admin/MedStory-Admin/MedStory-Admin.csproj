@@ -130,11 +130,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asupan.cs" />
     <Compile Include="Asupan_Database.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Asupan_Database.Designer.cs">
       <DependentUpon>Asupan_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asupan_Manajemen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asupan_Manajemen.Designer.cs">
+      <DependentUpon>Asupan_Manajemen.cs</DependentUpon>
     </Compile>
     <Compile Include="Control.cs" />
     <Compile Include="Darurat_Database.cs">
@@ -186,6 +193,9 @@
     </Compile>
     <EmbeddedResource Include="Asupan_Database.resx">
       <DependentUpon>Asupan_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asupan_Manajemen.resx">
+      <DependentUpon>Asupan_Manajemen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Darurat_Database.resx">
       <DependentUpon>Darurat_Database.cs</DependentUpon>

@@ -130,5 +130,28 @@ namespace MedStory_Admin
             }
             con.Close();
         }
+
+        public static void AddAsupan(Asupan asp)
+        {
+            string sql = "INSERT INTO asupan VALUES (NULL, @Nama, @Kategori, @Kalori, @Ukuran)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Nama", MySqlDbType.VarChar).Value = asp.Nama;
+            cmd.Parameters.Add("@Kategori", MySqlDbType.VarChar).Value = asp.Kategori;
+            cmd.Parameters.Add("@Kalori", MySqlDbType.VarChar).Value = asp.Kalori;
+            cmd.Parameters.Add("@Ukuran", MySqlDbType.VarChar).Value = asp.Ukuran;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Input gagal ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            con.Close();
+        }
     }
 }

@@ -88,6 +88,13 @@ namespace MedStory_Admin
                 forum_Manajemen1.BringToFront();
                 Form1_Shown(sender, e);
             }
+            else if (tab == "Asupan")
+            {
+                activeNav.Top = RoboDocManButton.Top;
+                activeNav.Location = RoboDocManButton.Location;
+                asupan_Manajemen1.BringToFront();
+                Form1_Shown(sender, e);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -153,6 +160,9 @@ namespace MedStory_Admin
         {
             activeMark.Height = AsupanButton.Height;
             activeMark.Top = AsupanButton.Top;
+            activeNav.Top = databaseButton.Top;
+            activeNav.Location = databaseButton.Location;
+            tab = "Asupan";
             asupan_Database1.BringToFront();
         }
 
@@ -187,6 +197,13 @@ namespace MedStory_Admin
                 activeNav.Top = databaseButton.Top;
                 activeNav.Location = databaseButton.Location;
                 forum_Database1.BringToFront();
+                Form1_Shown(sender, e);
+            }
+            else if (tab == "Asupan")
+            {
+                activeNav.Top = databaseButton.Top;
+                activeNav.Location = databaseButton.Location;
+                asupan_Database1.BringToFront();
                 Form1_Shown(sender, e);
             }
         }

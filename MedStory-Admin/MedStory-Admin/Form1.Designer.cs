@@ -55,13 +55,14 @@ namespace MedStory_Admin
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
+            this.forum_Manajemen1 = new MedStory_Admin.Forum_Manajemen();
+            this.robodoc_Manajemen1 = new MedStory_Admin.Robodoc_Manajemen();
             this.robodoc_Database1 = new MedStory_Admin.Robodoc_Database();
             this.darurat_Database1 = new MedStory_Admin.Darurat_Database();
             this.asupan_Database1 = new MedStory_Admin.Asupan_Database();
             this.pengguna_Database1 = new MedStory_Admin.Pengguna_Database();
             this.forum_Database1 = new MedStory_Admin.Forum_Database();
-            this.robodoc_Manajemen1 = new MedStory_Admin.Robodoc_Manajemen();
-            this.forum_Manajemen1 = new MedStory_Admin.Forum_Manajemen();
+            this.asupan_Manajemen1 = new MedStory_Admin.Asupan_Manajemen();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -400,6 +401,20 @@ namespace MedStory_Admin
             this.mySqlDataAdapter1.SelectCommand = null;
             this.mySqlDataAdapter1.UpdateCommand = null;
             // 
+            // forum_Manajemen1
+            // 
+            this.forum_Manajemen1.Location = new System.Drawing.Point(319, 67);
+            this.forum_Manajemen1.Name = "forum_Manajemen1";
+            this.forum_Manajemen1.Size = new System.Drawing.Size(1225, 800);
+            this.forum_Manajemen1.TabIndex = 8;
+            // 
+            // robodoc_Manajemen1
+            // 
+            this.robodoc_Manajemen1.Location = new System.Drawing.Point(319, 67);
+            this.robodoc_Manajemen1.Name = "robodoc_Manajemen1";
+            this.robodoc_Manajemen1.Size = new System.Drawing.Size(1225, 800);
+            this.robodoc_Manajemen1.TabIndex = 7;
+            // 
             // robodoc_Database1
             // 
             this.robodoc_Database1.Location = new System.Drawing.Point(319, 67);
@@ -435,25 +450,19 @@ namespace MedStory_Admin
             this.forum_Database1.Size = new System.Drawing.Size(1225, 801);
             this.forum_Database1.TabIndex = 2;
             // 
-            // robodoc_Manajemen1
+            // asupan_Manajemen1
             // 
-            this.robodoc_Manajemen1.Location = new System.Drawing.Point(319, 67);
-            this.robodoc_Manajemen1.Name = "robodoc_Manajemen1";
-            this.robodoc_Manajemen1.Size = new System.Drawing.Size(1225, 800);
-            this.robodoc_Manajemen1.TabIndex = 7;
-            // 
-            // forum_Manajemen1
-            // 
-            this.forum_Manajemen1.Location = new System.Drawing.Point(319, 67);
-            this.forum_Manajemen1.Name = "forum_Manajemen1";
-            this.forum_Manajemen1.Size = new System.Drawing.Size(1225, 800);
-            this.forum_Manajemen1.TabIndex = 8;
+            this.asupan_Manajemen1.Location = new System.Drawing.Point(319, 67);
+            this.asupan_Manajemen1.Name = "asupan_Manajemen1";
+            this.asupan_Manajemen1.Size = new System.Drawing.Size(1225, 800);
+            this.asupan_Manajemen1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.asupan_Manajemen1);
             this.Controls.Add(this.forum_Manajemen1);
             this.Controls.Add(this.robodoc_Manajemen1);
             this.Controls.Add(this.robodoc_Database1);
@@ -514,6 +523,7 @@ namespace MedStory_Admin
         private Robodoc_Database robodoc_Database1;
         private Robodoc_Manajemen robodoc_Manajemen1;
         private Forum_Manajemen forum_Manajemen1;
+        private Asupan_Manajemen asupan_Manajemen1;
     }
 }
 
