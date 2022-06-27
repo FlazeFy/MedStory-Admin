@@ -27,4 +27,23 @@ namespace MedStory_Admin
             Kordinat = kordinat;
         }
     }
+    class Dokter
+    {
+        public string NamaDokter { get; set; }
+        public string Spesialis { get; set; }
+        public string JamMulai { get; set; }
+        public string JamSelesai { get; set; }
+        public string HariPraktik { get; set; }
+        public string Lokasi { get; set; }
+
+        public Dokter(string namadokter, string spesialis, string jammulai, string jamselesai, string haripraktik, string lokasi)
+        {
+            NamaDokter = namadokter;
+            Spesialis = spesialis;
+            JamMulai = jammulai;
+            JamSelesai = jamselesai;
+            HariPraktik = haripraktik;
+            Lokasi = lokasi;
+        }
+    }
 }

@@ -200,5 +200,30 @@ namespace MedStory_Admin
             }
             con.Close();
         }
+
+        public static void AddDokterPraktek(Dokter dkt)
+        {
+            string sql = "INSERT INTO dokterpraktik VALUES (NULL, @NamaDokter, @Spesialis, @JamMulai, @JamSelesai, @HariPraktik, @Lokasi)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@NamaDokter", MySqlDbType.VarChar).Value = dkt.NamaDokter;
+            cmd.Parameters.Add("@Spesialis", MySqlDbType.VarChar).Value = dkt.Spesialis;
+            cmd.Parameters.Add("@JamMulai", MySqlDbType.VarChar).Value = dkt.JamMulai;
+            cmd.Parameters.Add("@JamSelesai", MySqlDbType.VarChar).Value = dkt.JamSelesai;
+            cmd.Parameters.Add("@HariPraktik", MySqlDbType.VarChar).Value = dkt.HariPraktik;
+            cmd.Parameters.Add("@Lokasi", MySqlDbType.VarChar).Value = dkt.Lokasi;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Input gagal ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            con.Close();
+        }
     }
 }

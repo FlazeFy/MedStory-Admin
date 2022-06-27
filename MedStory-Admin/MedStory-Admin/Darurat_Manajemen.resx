@@ -139,4 +139,19 @@
   <metadata name="mySqlCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>21, 15</value>
   </metadata>
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAhdJREFUSEvdlU9SE0EYxaMXwA2CukRgAagHUIp74EJBLgArd1wgUVcJlJcQvQV/
+        VsSFegASrPxPmVRSNfxe6mWmpjozwpZX9aq73/d9r3s63Z3C/Ue3213odDof2u32cavV+i7SP0LbJfbY
+        aXdHv99/htlXOMYwor2iPRPdlzaiPSb3qctuh2azuUXxX/gPFlnpukMx0DaIleAAXvNFmw7lw+ZDeAmf
+        W84EX7BMXlU1TPLG8mx4W7Tyy0ajMWd5Ak2G2R9RfcsTKBdNk9R7vd4TyyFI0J5rW4KVY3wAI3Pfcgy0
+        FeoGtEeW0tBpIWEMi5ZS0KQU/6b9BZcsp4D+GY5mni72fk+rI7hm6c5gq17IA+5YSqBPY/YrDwNEUfSQ
+        nLci/QeWA+BRI6fiYQICPwicehjA5pPfgNxtywGI656ceJgAUTf0zMMAxA6nE6hvOQCxC7y+eZiAQO4W
+        ydTmuRPgUScebpHeFhXrhlpKQaY2z5yAg/LK8XeWEuhoMfsIliylIFMXZ05A7Rd5sNh5S2lQqBdTl2XZ
+        Ugz0j9MJ1LccA30VfUhbthRCryJJ17Ca8VTMvGhszSO0n7DGU7FoeTb0KpKox66K4YrlTHjlMh9Q+9py
+        PvQqUlBXEfykG+pQDLSXxPQ0aDG1W5tPoVeR1eno6k9F+64bei7S11Gc/uGU/7stedCJwGQHVjA8EWUK
+        3yvmtHuLQuEGfUeCGUExN5EAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
