@@ -95,6 +95,13 @@ namespace MedStory_Admin
                 asupan_Manajemen1.BringToFront();
                 Form1_Shown(sender, e);
             }
+            else if (tab == "Darurat")
+            {
+                activeNav.Top = RoboDocManButton.Top;
+                activeNav.Location = RoboDocManButton.Location;
+                darurat_Manajemen1.BringToFront();
+                Form1_Shown(sender, e);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -170,6 +177,9 @@ namespace MedStory_Admin
         {
             activeMark.Height = NomorDaruratButton.Height;
             activeMark.Top = NomorDaruratButton.Top;
+            activeNav.Top = databaseButton.Top;
+            activeNav.Location = databaseButton.Location;
+            tab = "Darurat";
             darurat_Database1.BringToFront();
         }
 
@@ -204,6 +214,13 @@ namespace MedStory_Admin
                 activeNav.Top = databaseButton.Top;
                 activeNav.Location = databaseButton.Location;
                 asupan_Database1.BringToFront();
+                Form1_Shown(sender, e);
+            }
+            else if (tab == "Darurat")
+            {
+                activeNav.Top = databaseButton.Top;
+                activeNav.Location = databaseButton.Location;
+                darurat_Database1.BringToFront();
                 Form1_Shown(sender, e);
             }
         }

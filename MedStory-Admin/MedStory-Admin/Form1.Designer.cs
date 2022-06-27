@@ -55,6 +55,7 @@ namespace MedStory_Admin
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
+            this.asupan_Manajemen1 = new MedStory_Admin.Asupan_Manajemen();
             this.forum_Manajemen1 = new MedStory_Admin.Forum_Manajemen();
             this.robodoc_Manajemen1 = new MedStory_Admin.Robodoc_Manajemen();
             this.robodoc_Database1 = new MedStory_Admin.Robodoc_Database();
@@ -62,7 +63,7 @@ namespace MedStory_Admin
             this.asupan_Database1 = new MedStory_Admin.Asupan_Database();
             this.pengguna_Database1 = new MedStory_Admin.Pengguna_Database();
             this.forum_Database1 = new MedStory_Admin.Forum_Database();
-            this.asupan_Manajemen1 = new MedStory_Admin.Asupan_Manajemen();
+            this.darurat_Manajemen1 = new MedStory_Admin.Darurat_Manajemen();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -401,6 +402,13 @@ namespace MedStory_Admin
             this.mySqlDataAdapter1.SelectCommand = null;
             this.mySqlDataAdapter1.UpdateCommand = null;
             // 
+            // asupan_Manajemen1
+            // 
+            this.asupan_Manajemen1.Location = new System.Drawing.Point(319, 67);
+            this.asupan_Manajemen1.Name = "asupan_Manajemen1";
+            this.asupan_Manajemen1.Size = new System.Drawing.Size(1225, 800);
+            this.asupan_Manajemen1.TabIndex = 9;
+            // 
             // forum_Manajemen1
             // 
             this.forum_Manajemen1.Location = new System.Drawing.Point(319, 67);
@@ -450,18 +458,19 @@ namespace MedStory_Admin
             this.forum_Database1.Size = new System.Drawing.Size(1225, 801);
             this.forum_Database1.TabIndex = 2;
             // 
-            // asupan_Manajemen1
+            // darurat_Manajemen1
             // 
-            this.asupan_Manajemen1.Location = new System.Drawing.Point(319, 67);
-            this.asupan_Manajemen1.Name = "asupan_Manajemen1";
-            this.asupan_Manajemen1.Size = new System.Drawing.Size(1225, 800);
-            this.asupan_Manajemen1.TabIndex = 9;
+            this.darurat_Manajemen1.Location = new System.Drawing.Point(319, 67);
+            this.darurat_Manajemen1.Name = "darurat_Manajemen1";
+            this.darurat_Manajemen1.Size = new System.Drawing.Size(1225, 800);
+            this.darurat_Manajemen1.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.darurat_Manajemen1);
             this.Controls.Add(this.asupan_Manajemen1);
             this.Controls.Add(this.forum_Manajemen1);
             this.Controls.Add(this.robodoc_Manajemen1);
@@ -524,6 +533,7 @@ namespace MedStory_Admin
         private Robodoc_Manajemen robodoc_Manajemen1;
         private Forum_Manajemen forum_Manajemen1;
         private Asupan_Manajemen asupan_Manajemen1;
+        private Darurat_Manajemen darurat_Manajemen1;
     }
 }
 

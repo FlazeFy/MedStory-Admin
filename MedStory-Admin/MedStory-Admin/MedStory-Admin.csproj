@@ -144,11 +144,18 @@
       <DependentUpon>Asupan_Manajemen.cs</DependentUpon>
     </Compile>
     <Compile Include="Control.cs" />
+    <Compile Include="Darurat.cs" />
     <Compile Include="Darurat_Database.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Darurat_Database.Designer.cs">
       <DependentUpon>Darurat_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Darurat_Manajemen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Darurat_Manajemen.Designer.cs">
+      <DependentUpon>Darurat_Manajemen.cs</DependentUpon>
     </Compile>
     <Compile Include="DBMedStory.cs" />
     <Compile Include="Form1.cs">
@@ -199,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Darurat_Database.resx">
       <DependentUpon>Darurat_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Darurat_Manajemen.resx">
+      <DependentUpon>Darurat_Manajemen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

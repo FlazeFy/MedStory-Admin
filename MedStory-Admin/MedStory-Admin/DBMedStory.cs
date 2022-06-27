@@ -175,5 +175,30 @@ namespace MedStory_Admin
             }
             con.Close();
         }
+        public static void AddFasilitasKesehatan(Faskes fks)
+        {
+            string sql = "INSERT INTO faskes VALUES (NULL, @NamaFaskes, @Rating, @Alamat, @Kontak, @Fasilitas, @Poliklinik, @Kordinat)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@NamaFaskes", MySqlDbType.VarChar).Value = fks.NamaFaskes;
+            cmd.Parameters.Add("@Rating", MySqlDbType.VarChar).Value = fks.Rating;
+            cmd.Parameters.Add("@Alamat", MySqlDbType.VarChar).Value = fks.Alamat;
+            cmd.Parameters.Add("@Kontak", MySqlDbType.VarChar).Value = fks.Kontak;
+            cmd.Parameters.Add("@Fasilitas", MySqlDbType.VarChar).Value = fks.Fasilitas;
+            cmd.Parameters.Add("@Poliklinik", MySqlDbType.VarChar).Value = fks.Poliklinik;
+            cmd.Parameters.Add("@Kordinat", MySqlDbType.VarChar).Value = fks.Kordinat;
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Input gagal ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            con.Close();
+        }
     }
 }
