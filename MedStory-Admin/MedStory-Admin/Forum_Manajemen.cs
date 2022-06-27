@@ -67,5 +67,11 @@ namespace MedStory_Admin
                 }
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NewsFeed nws = new NewsFeed(titleCtrl.Text.Trim(), isiCtrl.Text.Trim());
+            DBMedStory.AddNewsFeed(nws);
+        }
     }
 }

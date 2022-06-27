@@ -38,3 +38,4 @@ C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Robodoc_Manajemen.resources
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Forum_Manajemen.resources
 C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory_Admin.Asupan_Manajemen.resources
+C:\Users\Asus\source\repos\MedStory-Admin\MedStory-Admin\obj\x86\Debug\MedStory-Admin.csproj.AssemblyReference.cache

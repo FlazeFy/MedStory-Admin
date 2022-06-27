@@ -153,5 +153,27 @@ namespace MedStory_Admin
             }
             con.Close();
         }
+
+        public static void AddNewsFeed(NewsFeed nws)
+        {
+            string sql = "INSERT INTO newsfeed VALUES (NULL, @Title, @Isi, @Tanggal)";
+            MySqlConnection con = GetConnection();
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("@Title", MySqlDbType.VarChar).Value = nws.Title;
+            cmd.Parameters.Add("@Isi", MySqlDbType.VarChar).Value = nws.Isi;
+            cmd.Parameters.Add("@Tanggal", MySqlDbType.VarChar).Value = DateTime.Now.ToString("yyyy-MM-dd");
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahakan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Input gagal ! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            con.Close();
+        }
     }
 }

@@ -33,4 +33,18 @@ namespace MedStory_Admin
             //ImageURL = imageurl;
         }
     }
+    class NewsFeed
+    {
+        public string Title { get; set; }
+        public string Isi { get; set; }
+
+        //public string ImageURL { get; set; }
+
+        public NewsFeed(string title, string isi)
+        {
+            Title = title;
+            Isi = isi;
+            //ImageURL = imageurl;
+        }
+    }
 }
